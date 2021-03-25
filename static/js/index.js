@@ -1,6 +1,6 @@
 //https://www.eclipse.org/paho/clients/js/
 
-function LED1_On() {
+/*function LED1_On() {
 	//alert("led on");
 	console.log("led on");
 	//document.getElementById("sensor").innerHTML="led on";
@@ -16,7 +16,7 @@ function LED1_Off(){
         message.destinationName = "orozcojuanpablo817@gmail.com/tema1";
         client.send(message);
 }
-
+*/
 
 
 
@@ -66,8 +66,19 @@ function LED1_Off(){
   }
 
   // called when a message arrives
-  function onMessageArrived(message) {
+ function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
 	  document.getElementById("sensor").innerHTML=message.payloadString;
+	  if(message.payloadString===' Encendido'){
+		  document.getElementById("imagen").src="http://www.clker.com/cliparts/M/h/R/9/8/H/red-led-on-md.png";
+	  } else if(message.payloadString===' Apagado'){
+		  document.getElementById("imagen").src="http://www.clker.com/cliparts/D/M/r/s/n/P/led-red-off-md.png";
+	  }
+	  if(message.payloadString===' Encendido'){
+		  document.getElementById("btn").innerHTML="Apagar";
+	  }else if(message.payloadString===' Apagado'){
+		  document.getElementById("btn").innerHTML="Encender";
+	  }
+	  
   }
   
