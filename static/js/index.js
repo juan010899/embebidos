@@ -18,7 +18,7 @@ function LED1_Off(){
 }
 */
  var btn=document.getElementById('btn'), contador=0;
-  function cambio()
+  function cambio_estado()
   { if (contador==0)
       {
       message = new Paho.MQTT.Message("ENCENDER");
