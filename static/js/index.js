@@ -22,14 +22,14 @@ function LED1_Off(){
   { if (contador==0)
       {
       message = new Paho.MQTT.Message("ENCENDER");
-      message.destinationName = "orozcojuanpablo817@gmail.com/tema1";
+      message.destinationName = "orozcojuanpablo817@gmail.com/test1";
       client.send(message);
       contador=1;
       }
     else
       {
       message = new Paho.MQTT.Message("APAGAR");
-      message.destinationName = "orozcojuanpablo817@gmail.com/tema1";
+      message.destinationName = "orozcojuanpablo817@gmail.com/test1";
       client.send(message);
       contador=0;
       }
@@ -65,9 +65,9 @@ function LED1_Off(){
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("orozcojuanpablo817@gmail.com/tema1");
+    client.subscribe("orozcojuanpablo817@gmail.com/test");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "orozcojuanpablo817@gmail.com/tema1";
+    message.destinationName = "orozcojuanpablo817@gmail.com/test1";
     client.send(message);
 	
   }
