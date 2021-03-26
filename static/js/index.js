@@ -123,11 +123,11 @@ function LED1_Off(){
 		  document.getElementById("sensor").innerHTML="apagado";
 		  document.getElementById("btn").innerHTML="Apagado";
           }
-          if(message.payloadString===' EncendidoLed2')
+ if(message.payloadString===' EncendidoLed2')
 	  {
 		  document.getElementById("sensor2").innerHTML="encendidoled2";
 		  document.getElementById("btn2").innerHTML="Encendido";
-	  }else if(message.payloadString===' ApagadoLed2')
+}else if(message.payloadString===' ApagadoLed2')
 	  {
 		  document.getElementById("sensor2").innerHTML="apagadoled2";
 		  document.getElementById("btn2").innerHTML="Apagado";
