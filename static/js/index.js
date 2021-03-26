@@ -120,7 +120,7 @@ function LED1_Off(){
 		 document.getElementById("sensor").innerHTML="encendidoled1";
 		 document.getElementById("btn").innerHTML="Apagar";
      }else if(message.payloadString===' ApagadoLed1'){
-		 document.getElementById("sensor").innerHTML="apagadoled2";
+		 document.getElementById("sensor").innerHTML="apagadoled1";
 		 document.getElementById("btn").innerHTML="Encender";
      }
     if(message.payloadString===' EncendidoLed2'){       
