@@ -132,8 +132,8 @@ function onMessageArrived1(message) {
 		//  document.getElementById("imagen").src="http://www.clker.com/cliparts/D/M/r/s/n/P/led-red-off-md.png";
 	  //}
 	  if(message.payloadString===' EncendidoLed2'){
-		  document.getElementById("btn2).innerHTML="Apagar";
+		  document.getElementById("btn2").innerHTML="Apagar";
 	  }else if(message.payloadString===' ApagadoLed2'){
-		  document.getElementById("btn2).innerHTML="Encender";
+		  document.getElementById("btn2").innerHTML="Encender";
 	  }
-    }
+  }
