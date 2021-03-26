@@ -130,7 +130,7 @@ function LED1_Off(){
   }
 
   function onMessageArrived1(message) {
-    console.log("onMessageArrived:"+message.payloadString); 
+    console.log("onMessageArrived1:"+message.payloadString); 
 	 document.getElementById("sensor2").innerHTML=message.payloadString;	 
 	  //document.getElementById("sensor").innerHTML=message.payloadString;
 	  //if(message.payloadString===' EncendidoLed1'){
@@ -140,7 +140,7 @@ function LED1_Off(){
 	  //}
     	 
 	//  if(message.payloadString===' EncendidoLed1'){
-		  document.getElementById("btn").innerHTML="Apagar";
+		  //document.getElementById("btn").innerHTML="Apagar";
 	  //}else if(message.payloadString===' ApagadoLed1'){
 		//  document.getElementById("btn").innerHTML="Encender";
 	  //}
