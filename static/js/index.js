@@ -116,13 +116,13 @@ function LED1_Off(){
     document.getElementById("sensor").innerHTML=message.payloadString;		 
 	  if(message.payloadString===' EncendidoLed1'){
 		  document.getElementById("btn").innerHTML="Apagar";
-	  }else if(message.payloadString===' ApagadoLed1{
+	  }else if(message.payloadString===' ApagadoLed1'){
 		  document.getElementById("btn").innerHTML="Encender";
 	  }
     document.getElementById("sensor2").innerHTML=message.payloadString;
           if(message.payloadString===' EncendidoLed2'){
 		  document.getElementById("btn2").innerHTML="Apagar";
-	  }else if(message.payloadString===' ApagadoLed2{
+	  }else if(message.payloadString===' ApagadoLed2'){
 		  document.getElementById("btn2").innerHTML="Encender";
 	  }
 	 
