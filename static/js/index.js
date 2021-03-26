@@ -89,7 +89,7 @@ function LED1_Off(){
     console.log("onMessageArrived:"+message.payloadString);
 	  document.getElementById("sensor").innerHTML=message.payloadString;
 	  if(message.payloadString==='Encendido'){
-		  document.getElementById("imagen").src="http://www.clker.com/cliparts/M/h/R/9/8/H/red-led-on-md.png";
+		  document.getElementById("imagen").src="static/images/ledblue.gif";
 	  } else if(message.payloadString==='Apagado'){
 		  document.getElementById("imagen").src="http://www.clker.com/cliparts/D/M/r/s/n/P/led-red-off-md.png";
 	  }
