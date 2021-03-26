@@ -116,17 +116,18 @@ function LED1_Off(){
 	  //}
     	 
 	  if(message.payloadString===' EncendidoLed1'){
-		  document.getElementById("sensor").innerHTML=message.payloadString;
+		  document.getElementById("sensor").innerHTML="encendido";
 		  document.getElementById("btn").innerHTML="Encendido";
 	  }else if(message.payloadString===' ApagadoLed1'){
+		  document.getElementById("sensor").innerHTML="apagado";
 		  document.getElementById("btn").innerHTML="Apagado";
-		  document.getElementById("sensor").innerHTML=message.payloadString;
+		  
 	  }
           if(message.payloadString===' EncendidoLed2'){
-		  document.getElementById("sensor2").innerHTML=message.payloadString;
+		  document.getElementById("sensor2").innerHTML="encendidoled2";
 		  document.getElementById("btn2").innerHTML="Encendido";
 	  }else if(message.payloadString===' ApagadoLed2'){
-		  document.getElementById("sensor2").innerHTML=message.payloadString;
+		  document.getElementById("sensor2").innerHTML="apagadoled2";
 		  document.getElementById("btn2").innerHTML="Apagado";
 	  }
 	 
