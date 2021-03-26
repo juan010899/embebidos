@@ -35,6 +35,25 @@ function LED1_Off(){
       }
   
   }
+ var btn2=document.getElementById('btn2'), contador2=0;
+  function change2()
+  { if (contador2==0)
+      {
+      message = new Paho.MQTT.Message("ENCENDER");
+      message.destinationName = "orozcojuanpablo817@gmail.com/test1";
+      client.send(message);
+      contador2=1;
+      }
+    else
+      {
+      message = new Paho.MQTT.Message("APAGAR");
+      message.destinationName = "orozcojuanpablo817@gmail.com/test1";
+      client.send(message);
+      contador2=0;
+      }
+  
+  }
+
 
 
 
