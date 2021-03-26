@@ -67,7 +67,7 @@ function LED1_Off(){
 
   // set callback handlers
   client.onConnectionLost = onConnectionLost;
-  client.onMessageArrived = onMessageArrived;}
+  client.onMessageArrived = onMessageArrived;
   client.onMessageArrived = onMessageArrived1;
   var options = {
    useSSL: false,
