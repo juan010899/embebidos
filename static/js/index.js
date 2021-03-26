@@ -68,6 +68,7 @@ function LED1_Off(){
   // set callback handlers
   client.onConnectionLost = onConnectionLost;
   client.onMessageArrived = onMessageArrived;
+  client.onMessageArrived = onMessageArrived1;
   var options = {
    useSSL: false,
     userName: "orozcojuanpablo817@gmail.com",
@@ -107,9 +108,7 @@ function LED1_Off(){
   // called when a message arrives
  function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString); 
-	 document.getElementById("sensor").innerHTML=message.payloadString;
-    console.log("onMessageArrived:"+message.payloadString1); 
-	 document.getElementById("sensor2").innerHTML=message.payloadString1;	 
+	 document.getElementById("sensor").innerHTML=message.payloadString;	 
 	  //document.getElementById("sensor").innerHTML=message.payloadString;
 	  //if(message.payloadString===' EncendidoLed1'){
 		//  document.getElementById("imagen").src="http://www.clker.com/cliparts/D/M/r/s/n/P/led-red-off-md.png";
@@ -122,6 +121,29 @@ function LED1_Off(){
 	  }else if(message.payloadString===' ApagadoLed1'){
 		  document.getElementById("btn").innerHTML="Encender";
 	  }
+          //if(message.payloadString===' EncendidoLed2'){
+		//   document.getElementById("btn2").innerHTML="Apagar";
+	  //}else if(message.payloadString===' ApagadoLed2'){
+	//	   document.getElementById("btn2").innerHTML="Encender";
+	  //}
+	 
+  }
+
+  function onMessageArrived1(message) {
+    console.log("onMessageArrived:"+message.payloadString); 
+	 document.getElementById("sensor2").innerHTML=message.payloadString;	 
+	  //document.getElementById("sensor").innerHTML=message.payloadString;
+	  //if(message.payloadString===' EncendidoLed1'){
+		//  document.getElementById("imagen").src="http://www.clker.com/cliparts/D/M/r/s/n/P/led-red-off-md.png";
+	  //} else if(message.payloadString===' ApagadoLed1'){
+		//  document.getElementById("imagen").src="http://www.clker.com/cliparts/D/M/r/s/n/P/led-red-off-md.png";
+	  //}
+    	 
+	//  if(message.payloadString===' EncendidoLed1'){
+		  document.getElementById("btn").innerHTML="Apagar";
+	  //}else if(message.payloadString===' ApagadoLed1'){
+		//  document.getElementById("btn").innerHTML="Encender";
+	  //}
           if(message.payloadString===' EncendidoLed2'){
 		   document.getElementById("btn2").innerHTML="Apagar";
 	  }else if(message.payloadString===' ApagadoLed2'){
@@ -129,4 +151,3 @@ function LED1_Off(){
 	  }
 	 
   }
-
