@@ -17,6 +17,8 @@ function LED1_Off(){
         client.send(message);
 }
 */
+/*
+encendido dos leds con dos botones
  var btn=document.getElementById('btn'), contador=0;
   function change()
   { if (contador==0)
@@ -53,9 +55,33 @@ function LED1_Off(){
       }
   
   }
-
-
-
+*/
+var btn=document.getElementById('btn'), contador=0;
+  function change()
+  { if (contador==0)
+      {
+      message = new Paho.MQTT.Message("ENCENDER");
+      message.destinationName = "orozcojuanpablo817@gmail.com/test1";
+      client.send(message);
+      contador=1;
+      }
+    else
+      {
+      message = new Paho.MQTT.Message("APAGAR");
+      message.destinationName = "orozcojuanpablo817@gmail.com/test1";
+      client.send(message);
+      contador=0;
+      }
+  
+  }
+ var btn2=document.getElementById('btn2');
+  function registro()
+      message = new Paho.MQTT.Message("registro");
+      message.destinationName = "orozcojuanpablo817@gmail.com/test2";
+      client.send(message);
+     
+  
+  }
 
 
 
@@ -123,13 +149,6 @@ function LED1_Off(){
 		 document.getElementById("sensor").innerHTML="apagadoled1";
 		 document.getElementById("btn").innerHTML="Encender";
      }
-    if(message.payloadString===' EncendidoLed2'){       
-		 document.getElementById("sensor2").innerHTML="encendidoled2";
-		 document.getElementById("btn2").innerHTML="Apagar";
-    }else if(message.payloadString===' ApagadoLed2'){       
-		 document.getElementById("sensor2").innerHTML="apagadoled2";
-		 document.getElementById("btn2").innerHTML="Encender";
-	 }
 	 
   }
 
