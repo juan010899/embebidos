@@ -76,6 +76,7 @@ var btn=document.getElementById('btn'), contador=0;
   }
  var btn2=document.getElementById('btn2');
   function change2()
+{
       message = new Paho.MQTT.Message("change2");
       message.destinationName = "orozcojuanpablo817@gmail.com/test2";
       client.send(message);
