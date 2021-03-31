@@ -87,7 +87,7 @@ var btn=document.getElementById('btn'), contador=0;
 
 */
 
-var btn=document.getElementById('btn'), contador=0;
+var btn=document.getElementById('btn');
   function change()
   { 
       message = new Paho.MQTT.Message("historial");
