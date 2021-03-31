@@ -55,7 +55,8 @@ encendido dos leds con dos botones
       }
   
   }
-*/
+.....................................................................................................
+
 var btn=document.getElementById('btn'), contador=0;
   function change()
   { if (contador==0)
@@ -84,9 +85,18 @@ var btn=document.getElementById('btn'), contador=0;
   
   }
 
+*/
 
-
-
+var btn=document.getElementById('btn'), contador=0;
+  function change()
+  { 
+      message = new Paho.MQTT.Message("historial");
+      message.destinationName = "orozcojuanpablo817@gmail.com/test1";
+      client.send(message);
+    
+      }
+   
+      
 // Create a client instance
   //client = new Paho.MQTT.Client("postman.cloudmqtt.com", 14970);
   
@@ -134,7 +144,10 @@ var btn=document.getElementById('btn'), contador=0;
   // called when a message arrives
  function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString); 
-	 
+	if(message.payloadString==='datos'){
+		 document.getElementById("sensor").innerHTML=message.payloadString	 
+	} 
+	} 
 	 //document.getElementById("sensor").innerHTML=message.payloadString;	 
 	  //document.getElementById("sensor").innerHTML=message.payloadString;
 	  //if(message.payloadString===' EncendidoLed1'){
@@ -143,14 +156,14 @@ var btn=document.getElementById('btn'), contador=0;
 		//  document.getElementById("imagen").src="http://www.clker.com/cliparts/D/M/r/s/n/P/led-red-off-md.png";
 	  //}
     	 
-	 if(message.payloadString===' EncendidoLed1'){
-		 document.getElementById("sensor").innerHTML="encendidoled1";
-		 document.getElementById("btn").innerHTML="Apagar";
-     }else if(message.payloadString===' ApagadoLed1'){
-		 document.getElementById("sensor").innerHTML="apagadoled1";
-		 document.getElementById("btn").innerHTML="Encender";
-     }
+	 //if(message.payloadString===' EncendidoLed1'){
+	//	 document.getElementById("sensor").innerHTML="encendidoled1";
+	//	 document.getElementById("btn").innerHTML="Apagar";
+     //}else if(message.payloadString===' ApagadoLed1'){
+	//	 document.getElementById("sensor").innerHTML="apagadoled1";
+	//	 document.getElementById("btn").innerHTML="Encender";
+     //}
 	 
-  }
+  //}
 
 
