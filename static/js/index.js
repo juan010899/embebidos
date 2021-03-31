@@ -144,6 +144,7 @@ var btn=document.getElementById('btn');
   // called when a message arrives
  function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString); 
+	document.getElementById("sensor").innerHTML=message.payloadString; 
 	if(message.payloadString==='datos'){
 		 document.getElementById("sensor").innerHTML=message.payloadString;	 
 	} 
