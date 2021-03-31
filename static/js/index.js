@@ -145,7 +145,7 @@ var btn=document.getElementById('btn');
  function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString); 
 	if(message.payloadString==='datos'){
-		 document.getElementById("sensor").innerHTML=message.payloadString	 
+		 document.getElementById("sensor").innerHTML=message.payloadString;	 
 	} 
 	} 
 	 //document.getElementById("sensor").innerHTML=message.payloadString;	 
