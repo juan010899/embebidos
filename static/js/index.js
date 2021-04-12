@@ -58,7 +58,7 @@ var btn=document.getElementById('btn');
     console.log("onMessageArrived:"+message.payloadString); 
 
 	if(message.detinationName=="orozcojuanpablo817@gmail.com/test"){
-		 document.getElementById("cuadro").innerHTML=message.payloadString;	 
+		 document.getElementById("historial").innerHTML=message.payloadString;	 
     }if(message.payloadString==="1"){
       document.getElementById("sensor").innerHTML="1";
     }
