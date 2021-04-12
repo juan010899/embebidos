@@ -72,7 +72,7 @@ var btn=document.getElementById('btn');
     //if(message.payloadString==="0"){
       //document.getElementById("sensor").innerHTML="0";
     //}
-	 }
+	 //}
  
 	 //document.getElementById("sensor").innerHTML=message.payloadString;	 
 	  //document.getElementById("sensor").innerHTML=message.payloadString;
