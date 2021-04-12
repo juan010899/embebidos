@@ -56,10 +56,10 @@ var btn=document.getElementById('btn');
   // called when a message arrives
  function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString); 
-
-	if(message.detinationName=="orozcojuanpablo817@gmail.com/test"){
-		 document.getElementById("sensor").innerHTML=message.payloadString;	 
-    }//if(message.payloadString==="1"){
+    document.getElementById("sensor").innerHTML=message.payloadString;
+	//if(message.detinationName=="orozcojuanpablo817@gmail.com/test"){
+		//document.getElementById("sensor").innerHTML=message.payloadString;	 
+    //}//if(message.payloadString==="1"){
       //document.getElementById("sensor").innerHTML="1";
     //}
     //if(message.payloadString==="0"){
