@@ -33,6 +33,7 @@ var btn=document.getElementById('btn');
     console.log("Conectado...");
 	
     client.subscribe("orozcojuanpablo817@gmail.com/test"); 
+    client.subscribe("orozcojuanpablo817@gmail.com/test1"); 
     message = new Paho.MQTT.Message("hola desde la web");
     message.destinationName = "orozcojuanpablo817@gmail.com/test1";
     message.destinationName = "orozcojuanpablo817@gmail.com/test2";	  
@@ -58,14 +59,14 @@ var btn=document.getElementById('btn');
 
 	if(message.detinationName=="orozcojuanpablo817@gmail.com/test"){
 		 document.getElementById("cuadro").innerHTML=message.payloadString;	 
-    if(message.payloadString==="1"){
+    }if(message.payloadString==="1"){
       document.getElementById("sensor").innerHTML="1";
     }
     else if(message.payloadString==="0"){
       document.getElementById("sensor").innerHTML="0";
     }
 	} 
-} 
+ 
 	 //document.getElementById("sensor").innerHTML=message.payloadString;	 
 	  //document.getElementById("sensor").innerHTML=message.payloadString;
 	  //if(message.payloadString===' EncendidoLed1'){
