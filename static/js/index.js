@@ -58,14 +58,14 @@ var btn=document.getElementById('btn');
     console.log("onMessageArrived:"+message.payloadString); 
 
 	if(message.detinationName=="orozcojuanpablo817@gmail.com/test"){
-		 document.getElementById("historial").innerHTML=message.payloadString;	 
-    }if(message.payloadString==="1"){
-      document.getElementById("sensor").innerHTML="1";
-    }
-    else if(message.payloadString==="0"){
-      document.getElementById("sensor").innerHTML="0";
-    }
-	} 
+		 document.getElementById("sensor").innerHTML=message.payloadString;	 
+    }//if(message.payloadString==="1"){
+      //document.getElementById("sensor").innerHTML="1";
+    //}
+    //if(message.payloadString==="0"){
+      //document.getElementById("sensor").innerHTML="0";
+    //}
+	 }
  
 	 //document.getElementById("sensor").innerHTML=message.payloadString;	 
 	  //document.getElementById("sensor").innerHTML=message.payloadString;
