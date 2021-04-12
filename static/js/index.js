@@ -1,92 +1,3 @@
-//https://www.eclipse.org/paho/clients/js/
-
-/*function LED1_On() {
-	//alert("led on");
-	console.log("led on");
-	//document.getElementById("sensor").innerHTML="led on";
-        message = new Paho.MQTT.Message("ENCENDER");
-        message.destinationName = "orozcojuanpablo817@gmail.com/tema1";
-        client.send(message);
-}
-function LED1_Off(){	
-	//alert("led off");
-	console.log("led off");
-	//document.getElementById("sensor").innerHTML="led off";
-	message = new Paho.MQTT.Message("APAGAR");
-        message.destinationName = "orozcojuanpablo817@gmail.com/tema1";
-        client.send(message);
-}
-*/
-/*
-encendido dos leds con dos botones
- var btn=document.getElementById('btn'), contador=0;
-  function change()
-  { if (contador==0)
-      {
-      message = new Paho.MQTT.Message("ENCENDERLED1");
-      message.destinationName = "orozcojuanpablo817@gmail.com/test1";
-      client.send(message);
-      contador=1;
-      }
-    else
-      {
-      message = new Paho.MQTT.Message("APAGARLED1");
-      message.destinationName = "orozcojuanpablo817@gmail.com/test1";
-      client.send(message);
-      contador=0;
-      }
-  
-  }
- var btn2=document.getElementById('btn2'), contador2=0;
-  function change2()
-  { if (contador2==0)
-      {
-      message = new Paho.MQTT.Message("ENCENDERLED2");
-      message.destinationName = "orozcojuanpablo817@gmail.com/test2";
-      client.send(message);
-      contador2=1;
-      }
-    else
-      {
-      message = new Paho.MQTT.Message("APAGARLED2");
-      message.destinationName = "orozcojuanpablo817@gmail.com/test2";
-      client.send(message);
-      contador2=0;
-      }
-  
-  }
-.....................................................................................................
-
-var btn=document.getElementById('btn'), contador=0;
-  function change()
-  { if (contador==0)
-      {
-      message = new Paho.MQTT.Message("ENCENDER");
-      message.destinationName = "orozcojuanpablo817@gmail.com/test1";
-      client.send(message);
-      contador=1;
-      }
-    else
-      {
-      message = new Paho.MQTT.Message("APAGAR");
-      message.destinationName = "orozcojuanpablo817@gmail.com/test1";
-      client.send(message);
-      contador=0;
-      }
-  
-  }
- var btn2=document.getElementById('btn2');
-  function change2()
-{
-      message = new Paho.MQTT.Message("change2");
-      message.destinationName = "orozcojuanpablo817@gmail.com/test2";
-      client.send(message);
-     
-  
-  }
-
-*/
-
 var btn=document.getElementById('btn');
   function change()
   { 
@@ -144,11 +55,17 @@ var btn=document.getElementById('btn');
   // called when a message arrives
  function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString); 
-	document.getElementById("sensor").innerHTML=message.payloadString; 
-	if(message.payloadString==='datos '){
-		 document.getElementById("sensor").innerHTML=message.payloadString;	 
+
+	if(message.detinationName=="orozcojuanpablo817@gmail.com/test"){
+		 document.getElementById("cuadro").innerHTML=message.payloadString;	 
+    if(message.payloadString==="1"){
+      document.getElementById("sensor").innerHTML="1";
+    }
+    else if(message.payloadString==="0"){
+      document.getElementById("sensor").innerHTML="0";
+    }
 	} 
-	} 
+} 
 	 //document.getElementById("sensor").innerHTML=message.payloadString;	 
 	  //document.getElementById("sensor").innerHTML=message.payloadString;
 	  //if(message.payloadString===' EncendidoLed1'){
