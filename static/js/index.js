@@ -1,7 +1,7 @@
 var btn=document.getElementById('btn');
   function change()
   { 
-      message = new Paho.MQTT.Message("historial");
+      message = new Paho.MQTT.Message("verhistorial");
       message.destinationName = "orozcojuanpablo817@gmail.com/test1";
       client.send(message);
     
