@@ -63,16 +63,16 @@ var btn=document.getElementById('btn');
       //if(message.payloadString==="1"){
       //document.getElementById("sensor").innerHTML="1";  
     //}
-  }
-	//if(message.detinationName=="orozcojuanpablo817@gmail.com/test"){
-		//document.getElementById("sensor").innerHTML=message.payloadString;	 
-    //}//if(message.payloadString==="1"){
-      //document.getElementById("sensor").innerHTML="1";
-    //}
-    //if(message.payloadString==="0"){
-      //document.getElementById("sensor").innerHTML="0";
-    //}
-	 //}
+  
+	if(message.detinationName=="orozcojuanpablo817@gmail.com/test"){
+		document.getElementById("sensor").innerHTML=message.payloadString;	 
+    }if(message.payloadString==="1"){
+      document.getElementById("sensor").innerHTML="1";
+    }
+    if(message.payloadString==="0"){
+      document.getElementById("sensor").innerHTML="0";
+    }
+	 }
  
 	 //document.getElementById("sensor").innerHTML=message.payloadString;	 
 	  //document.getElementById("sensor").innerHTML=message.payloadString;
