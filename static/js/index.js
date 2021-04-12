@@ -64,7 +64,7 @@ var btn=document.getElementById('btn');
       //document.getElementById("sensor").innerHTML="1";  
     //}
   
-	if(message.detinationName=="orozcojuanpablo817@gmail.com/test"){
+	if(message.detinationName=="orozcojuanpablo817@gmail.com/test1"){
 		document.getElementById("sensor").innerHTML=message.payloadString;	 
     }if(message.payloadString==="1"){
       document.getElementById("sensor").innerHTML="1";
